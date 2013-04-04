@@ -26,7 +26,7 @@ namespace BicyclesSuite.Shared
         /// <returns></returns>
         public static string GetQualifiedTypeName(this Type value)
         {
-            return string.Format("{0},{1}", value.FullName, value.Assembly.GetName().Name);
+            return string.Format(ReflectionFactory.TYPE_UNIQUE_NAME_FORMAT, value.FullName, value.Assembly.GetName().Name);
         }
 
         /// <summary>

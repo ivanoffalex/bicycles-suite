@@ -13,6 +13,7 @@ namespace BicyclesSuite.Shared.Reflection
     /// </summary>
     [DebuggerStepThrough]
     [DebuggerNonUserCode]
+    [DebuggerDisplay("Type = {TypeName}, Assembly = {AssemblyFullName}")]
     public sealed class TypeInfo
     {
         internal TypeInfo(string typeName, string assemblyFullName)
@@ -47,15 +48,6 @@ namespace BicyclesSuite.Shared.Reflection
         /// Assembly full name
         /// </summary>
         public string AssemblyFullName { get; private set; }
-
-        /// <summary>
-        /// Assembly inforamtion
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
-        {
-            return string.Format("TypeName = \"{0}\", AssemblyName = \"{1}\"", TypeName, AssemblyFullName);
-        }
 
         /// <summary>
         /// Equals 

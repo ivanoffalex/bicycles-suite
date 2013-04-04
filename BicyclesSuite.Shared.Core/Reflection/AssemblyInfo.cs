@@ -13,6 +13,7 @@ namespace BicyclesSuite.Shared.Reflection
     /// </summary>
     [DebuggerStepThrough]
     [DebuggerNonUserCode]
+    [DebuggerDisplay("Assembly = {AssemblyName}")]
     public sealed class AssemblyInfo
     {
         internal AssemblyInfo(Assembly assembly, TypeInfo[] excludedTypes)
@@ -45,16 +46,6 @@ namespace BicyclesSuite.Shared.Reflection
         /// Excluded types
         /// </summary>
         public TypeInfo[] ExcludedTypes { get; private set; }
-
-        /// <summary>
-        /// Assembly inforamtion
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
-        {
-            return string.Format("AssemblyName = \"{0}\", ExcludedTypes[{1}])", AssemblyName,
-                                 ExcludedTypes.Length);
-        }
 
         /// <summary>
         /// Equals 

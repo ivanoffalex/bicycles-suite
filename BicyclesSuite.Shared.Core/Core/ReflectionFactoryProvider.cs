@@ -9,7 +9,7 @@ namespace BicyclesSuite.Shared.Core
     [DebuggerNonUserCode]
     internal class ReflectionFactoryProvider
     {
-//#warning Move to configuration
+#warning read reflection configuration
 //        internal sealed class ReflectionSettings
 //        {
 //            //const ReflectionInvokeMethod InvokeMethod = ReflectionInvokeMethod.Emit;
@@ -21,8 +21,8 @@ namespace BicyclesSuite.Shared.Core
         internal static int CacheLimit = 10000;
         internal static ReflectionInvokeMethod InvokeMethodType = ReflectionInvokeMethod.Emit;
 
-        private static readonly Dictionary<string, Type> m_types;
-        private static readonly Dictionary<MemberInfoHashKey, MemberInfoHashValue> m_reflectionCache;
+        private static readonly IDictionary<string, Type> m_types;
+        private static readonly IDictionary<MemberInfoHashKey, MemberInfoHashValue> m_reflectionCache;
 
         private static readonly object m_syncTypes;
         private static readonly object m_syncMember;

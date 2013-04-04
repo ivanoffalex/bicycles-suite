@@ -19,7 +19,7 @@ namespace BicyclesSuite.Shared.Reflection
     {
         #region Members
 
-        private const string TYPE_UNIQUE_NAME_FORMAT = "{0},{1}";
+        internal const string TYPE_UNIQUE_NAME_FORMAT = "{0},{1}";
 
         private static readonly Stack m_stack = Stack.Synchronized(new Stack());
 
