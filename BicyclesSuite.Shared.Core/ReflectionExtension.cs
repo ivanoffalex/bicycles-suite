@@ -20,6 +20,28 @@ namespace BicyclesSuite.Shared
         }
 
         /// <summary>
+        /// Get qualified type name
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string GetQualifiedTypeName(this Type value)
+        {
+            return string.Format("{0},{1}", value.FullName, value.Assembly.GetName().Name);
+        }
+
+        /// <summary>
+        /// Cast object to specific type
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
+        /// <param name="typeToCastTo"></param>
+        /// <returns></returns>
+        public static T ToType<T>(this object obj, T typeToCastTo)
+        {
+            return (T)obj;
+        }
+
+        /// <summary>
         /// Create type info by System.Type
         /// </summary>
         /// <param name="type">Runtime type</param>

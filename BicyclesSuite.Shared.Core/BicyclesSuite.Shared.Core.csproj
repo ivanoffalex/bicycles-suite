@@ -41,6 +41,7 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoggerExtension.cs" />
     <Compile Include="Reflection\IPrototypeInstance.cs" />
     <Compile Include="ReflectionExtension.cs" />
     <Compile Include="Reflection\AssemblyInfo.cs" />
@@ -54,8 +55,15 @@
     <Compile Include="Core\ReflectionFactoryProvider.cs" />
     <Compile Include="Core\ReflectionInvokeMethod.cs" />
     <Compile Include="Reflection\ReflectionFactory.cs" />
+    <Compile Include="RequestExtension.cs" />
+    <Compile Include="RuntimeConfig.cs" />
     <Compile Include="SafeConvert.cs" />
     <Compile Include="Reflection\TypeInfo.cs" />
+    <Compile Include="StringExtension.cs" />
+    <Compile Include="WCF\CheckWCFServiceIPAttribute.cs" />
+    <Compile Include="Web\CacheQueueManager.cs" />
+    <Compile Include="Web\CompressionModule.cs" />
+    <Compile Include="Web\GZipContextBot.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
