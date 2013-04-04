@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -9,6 +10,8 @@ namespace BicyclesSuite.Shared
     /// <summary>
     /// Extension methods for Collection classes
     /// </summary>
+    [DebuggerStepThrough]
+    [DebuggerNonUserCode]
     public static class CollectionExtension
     {
         /// <summary>

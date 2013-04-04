@@ -35,15 +35,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reflection\IPrototypeInstance.cs" />
+    <Compile Include="ReflectionExtension.cs" />
+    <Compile Include="Reflection\AssemblyInfo.cs" />
     <Compile Include="CollectionExtension.cs" />
     <Compile Include="DataExtension.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\MemberInfoHashKey.cs" />
+    <Compile Include="Core\MemberInfoHashValue.cs" />
+    <Compile Include="Core\ReflectionFactoryInvoker.cs" />
+    <Compile Include="Core\ReflectionFactoryProvider.cs" />
+    <Compile Include="Core\ReflectionInvokeMethod.cs" />
+    <Compile Include="Reflection\ReflectionFactory.cs" />
+    <Compile Include="SafeConvert.cs" />
+    <Compile Include="Reflection\TypeInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

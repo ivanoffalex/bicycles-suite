@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Data;
+using System.Diagnostics;
 
 namespace BicyclesSuite.Shared
 {
     /// <summary>
     /// Extension methods for System.Data classes
     /// </summary>
+    [DebuggerStepThrough]
+    [DebuggerNonUserCode]
     public static class DataExtension
     {
         /// <summary>
@@ -24,6 +27,7 @@ namespace BicyclesSuite.Shared
             if (connection == null)
             {
                 throw new ArgumentNullException("Connection can't be null");
+#warning Constant.Exception.Runtime...CreateException();
             }
             connection.Open();
             IDbTransaction transaction = null;
@@ -36,6 +40,7 @@ namespace BicyclesSuite.Shared
                 if (transaction == null)
                 {
                     throw new NullReferenceException("Transaction can't be null");
+#warning Constant.Exception.Runtime...CreateException();
                 }
 
                 method(transaction);

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Web.UI.WebControls;
 
 namespace BicyclesSuite.Shared
@@ -11,6 +9,8 @@ namespace BicyclesSuite.Shared
     /// Enum helper
     /// </summary>
     /// <typeparam name="T">Enum type</typeparam>
+    [DebuggerStepThrough]
+    [DebuggerNonUserCode]
     public static class Enum<T> where T : struct, IConvertible
     {
         static Enum()
