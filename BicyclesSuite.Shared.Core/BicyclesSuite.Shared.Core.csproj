@@ -43,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoggerExtension.cs" />
+    <Compile Include="Logging\ILoggerProvider.cs" />
+    <Compile Include="Logging\LogLevel.cs" />
+    <Compile Include="Logging\LogManager.cs" />
     <Compile Include="Reflection\IPrototypeInstance.cs" />
     <Compile Include="ReflectionExtension.cs" />
     <Compile Include="Reflection\AssemblyInfo.cs" />

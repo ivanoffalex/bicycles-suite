@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Security;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
@@ -13,6 +14,8 @@ namespace BicyclesSuite.Shared.WCF
     /// Class level attribute to add IP check to WCF service host
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
+    [DebuggerStepThrough]
+    [DebuggerNonUserCode]
     public class CheckWCFServiceIPAttribute : Attribute, IServiceBehavior
     {
         internal class MyInspector : IParameterInspector
