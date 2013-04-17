@@ -4,7 +4,7 @@ namespace BicyclesSuite.Shared.Logging
 {
     public static class LogManager<T>
     {
-        private static ILoggerProvider _logger = null;
+        private static IList<ILoggerProvider> _logger = new List<ILoggerProvider>();
 
         public static void Trace(string message, params object[] args)
         {

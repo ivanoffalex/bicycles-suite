@@ -7,7 +7,7 @@ namespace BicyclesSuite.Shared
     /// <summary>
     /// Extension methods for System.Reflection
     /// </summary>
-    public static class ReflectionExtension
+    public static class ReflectionExtensions
     {
         /// <summary>
         /// Get unique assembly name

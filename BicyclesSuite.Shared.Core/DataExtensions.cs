@@ -9,7 +9,7 @@ namespace BicyclesSuite.Shared
     /// </summary>
     [DebuggerStepThrough]
     [DebuggerNonUserCode]
-    public static class DataExtension
+    public static class DataExtensions
     {
         /// <summary>
         /// Wrap anonymous delegate with transaction

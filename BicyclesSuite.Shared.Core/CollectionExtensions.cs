@@ -12,7 +12,7 @@ namespace BicyclesSuite.Shared
     /// </summary>
     [DebuggerStepThrough]
     [DebuggerNonUserCode]
-    public static class CollectionExtension
+    public static class CollectionExtensions
     {
         /// <summary>
         /// Join each item in the collection together with the glue string, returning a single string

@@ -5,7 +5,7 @@ namespace BicyclesSuite.Shared
     /// <summary>
     /// Extension methods for HttpRequest
     /// </summary>
-    public static class RequestExtension
+    public static class RequestExtensions
     {
         private static readonly string[] _MobileDevices = 
             new [] 
