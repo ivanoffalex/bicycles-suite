@@ -15,55 +15,6 @@ namespace BicyclesSuite.Shared
     public static class CollectionExtensions
     {
         /// <summary>
-        /// Join each item in the collection together with the glue string, returning a single string
-        /// Each object in the collection will be converted to string with ToString()
-        /// </summary>
-        /// <param name="list"></param>
-        /// <param name="glue"></param>
-        /// <returns></returns>
-        public static string Join(this IList list, string glue)
-        {
-            int cnt = list != null ? list.Count : 0;
-            StringBuilder sb = new StringBuilder();
-            if (cnt > 0)
-            {
-                sb.Append(list[0]);
-            }
-            for (int i = 1; i < cnt; i++)
-            {
-                sb.Append(glue);
-                sb.Append(list[i]);
-            }
-            return sb.ToString();
-        }
-
-        /// <summary>
-        /// Join each item in the collection together with the glue string, returning a single string
-        /// Each object in the collection will be converted to string with ToString()
-        /// </summary>
-        /// <param name="collection"></param>
-        /// <param name="glue"></param>
-        /// <returns></returns>
-        public static string Join(this IEnumerable collection, string glue)
-        {
-            StringBuilder sb = new StringBuilder();
-            bool isFirst = true;
-            foreach (object item in collection)
-            {
-                if (isFirst)
-                {
-                    isFirst = false;
-                }
-                else
-                {
-                    sb.Append(glue);
-                }
-                sb.Append(item);
-            }
-            return sb.ToString();
-        }
-
-        /// <summary>
         /// Split collection by chunks
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -72,12 +23,18 @@ namespace BicyclesSuite.Shared
         /// <param name="chunkSize"></param>
         public static void ActionByChunk<T>(this IEnumerable<T> source, Action<IEnumerable<T>> action, int chunkSize = 1000)
         {
-            int count = source != null ? source.Count() : 0;
+            if (source == null)
+            {
+                return;
+            }
+
+            T[] arr = source.ToArray();
+            int count = arr.Length;
             int offset = 0;
 
             while (count > 0)
             {
-                var items = source.Skip(offset).Take(chunkSize);
+                var items = arr.Skip(offset).Take(chunkSize);
                 action(items);
                 offset += chunkSize;
                 count -= chunkSize;
