@@ -53,8 +53,6 @@ namespace BicyclesSuite.Shared
                 {
                     transaction.Rollback();
                 }
-#warning Apply ILogger extension
-                //method.GetType().Error(ex);
                 throw new Exception(ex.Message, ex);
             }
             finally
