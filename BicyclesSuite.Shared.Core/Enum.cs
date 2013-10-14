@@ -72,7 +72,7 @@ namespace BicyclesSuite.Shared
         /// <param name="useEnumValues"></param>
         /// <param name="replacementRules"></param>
         /// <returns></returns>
-        public static List<ListItem> ToDropdown(bool useEnumValues = false, Tuple<string, string>[] replacementRules = null)
+        public static List<ListItem> ToDropdown(bool useEnumValues = false, params Tuple<string, string>[] replacementRules)
         {
             List<ListItem> result = new List<ListItem>();
 
