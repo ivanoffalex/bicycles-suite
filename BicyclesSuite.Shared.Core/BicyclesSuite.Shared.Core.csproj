@@ -48,6 +48,7 @@
     <None Include="Logging\ILoggerProvider.cs" />
     <None Include="Logging\LogLevel.cs" />
     <None Include="Logging\LogManager.cs" />
+    <Compile Include="ItemSet.cs" />
     <Compile Include="Reflection\IPrototypeInstance.cs" />
     <Compile Include="Extensions\ReflectionExtensions.cs" />
     <Compile Include="Reflection\AssemblyInfo.cs" />
